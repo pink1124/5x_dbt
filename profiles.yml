@@ -1,0 +1,18 @@
+config:
+  send_anonymous_usage_stats: False
+
+default:
+  outputs:
+
+    dev: # User-Password config
+      type: snowflake
+      account: fv34040.us-central1.gcp
+      user: candidate
+      password: RYVYSUMAWRSSMDBP
+      database: INTERVIEW_DB
+      warehouse: COMPUTE_WH
+      schema: PLAYGROUND_RANJITH_GANDHASIRI
+      threads: 1
+      client_session_keep_alive: False
+
+  target: develop_ran
