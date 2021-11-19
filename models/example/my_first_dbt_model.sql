@@ -1,3 +1,4 @@
+
 /*
     Welcome to your first dbt model!
     Did you know that you can also configure models directly within SQL files?
@@ -7,7 +8,17 @@
 
 {{ config(materialized='table') }}
 
-select location, population from COVID_19_INDONESIA_RANJITH_GANDHASIRI
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+where id is not null
 
 /*
     Uncomment the line below to remove records with null `id` values
